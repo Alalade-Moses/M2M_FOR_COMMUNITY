@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2M Token Eligibility Checker</title>
+    <meta name="description" content="Check your eligibility for M2M token distribution. Community-driven blockchain verification on Monad Testnet.">
+    <link rel="stylesheet" href="/css/styles.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.1/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="bg-animation">
+        <div class="floating-orb orb1"></div>
+        <div class="floating-orb orb2"></div>
+        <div class="floating-orb orb3"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="logo">M2M</h1>
+            <p class="subtitle">Token Eligibility Checker</p>
+            <p class="community-text">50% of M2M supply will be distributed to the community</p>
+        </div>
+
+        <!-- Main Card -->
+        <div class="card">
+            <form id="eligibilityForm">
+                <div class="form-group">
+                    <label for="walletAddress" class="input-label">Enter Your Wallet Address</label>
+                    <input 
+                        type="text" 
+                        id="walletAddress" 
+                        class="wallet-input" 
+                        placeholder="0x1234567890abcdef..."
+                        maxlength="42"
+                        required
+                    >
+                    <div class="input-hint">
+                        Your wallet will be checked against the Monad Testnet
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <div class="loading-spinner" id="loadingSpinner"></div>
+                    <span class="btn-text" id="btnText">Check Eligibility</span>
+                </button>
+            </form>
+
+            <!-- Requirements Info -->
+            <div class="requirements-info">
+                <h3>Eligibility Requirements:</h3>
+                <ul>
+                    <li>Have 1M NAD SBT tokens in your wallet</li>
+                    <li>Have 100 transactions completed on Monad Testnet</li>
+                </ul>
+<!--                 
+                <div class="tier-breakdown">
+                    <h4>Allocation Tiers:</h4>
+                    <div class="tier-item">
+                        <span class="tier-name">Basic (100-499):</span>
+                        <span class="tier-allocation">22,250 & Above M2M</span>
+                    </div>
+                    <div class="tier-item">
+                        <span class="tier-name">Medium (500-999 tx):</span>
+                        <span class="tier-allocation">31,350 & Above M2M</span>
+                    </div>
+                    <div class="tier-item">
+                        <span class="tier-name">Maximum (1000+ ):</span>
+                        <span class="tier-allocation">40,500 & Above M2M</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Status Display -->
+            <div class="status-container" id="statusContainer" style="display: none;">
+                <div class="status-title" id="statusTitle"></div>
+                <div id="statusMessage"></div>
+                <div class="wallet-details" id="walletDetails" style="display: none;"></div>
+                <div class="tier-info" id="tierInfo" style="display: none;">
+                    <strong>Your Allocation:</strong>
+                    <div id="tierDetails"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <!-- <div class="stats-section">
+            <h3>Community Stats</h3>
+            <div class="stats-grid" id="statsGrid">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalSubmissions">-</div>
+                    <div class="stat-label">Total Submissions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="eligibleWallets">-</div>
+                    <div class="stat-label">Eligible Wallets</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="eligibilityRate">-</div>
+                    <div class="stat-label">Eligibility Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalAllocation">-</div>
+                    <div class="stat-label">Total Allocation</div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Footer -->
+    <div class="footer">
+        <p class="footer-text">Powered by and for the community</p>
+         
+
+        
+  <a href="https://x.com/montodamoon" target="_blank" class="twitter-link">
+    <i class="fab fa-twitter"></i> Follow Us on Twitter
+  </a>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
