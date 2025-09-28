@@ -21,8 +21,14 @@ const limiter = rateLimit({
 });
 app.use('/api/', limiter);
 
+ 
 // Serve static files
 app.use(express.static('public'));
+
+// Serve views
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
 
 // MongoDB Schema - Simplified
 const walletSchema = new mongoose.Schema({
