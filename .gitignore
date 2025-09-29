@@ -88,18 +88,8 @@ typings/
 .nuxt
 dist
 
-# Gatsby files
-.cache/
-public
-
-# Storybook build outputs
-.out
-.storybook-out
-
-# Temporary folders
-tmp/
-temp/
-
+ 
+ 
 # Editor directories and files
 .vscode/
 .idea/
